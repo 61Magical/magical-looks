@@ -1,0 +1,41 @@
+{
+  "name": "magical-lookswaya",
+  "version": "0.0.2",
+  "description": "",
+  "type": "module",
+  "source": "src/index.js",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "scripts": {
+    "clean": "rm -rf dist/",
+    "copy": "cp README.md dist",
+    "dev": "microbundle watch",
+    "prepare": "npm run clean && microbundle --jsx React.createElement && npm run copy",
+    "start": "npm run prepare && npm publish"
+  },
+  "keywords": [
+    "css-in-js",
+    "styled-components",
+    "magical",
+    "magic",
+    "styled-system",
+    "styled-css",
+    "css-in-react",
+    "react",
+    "react-dom"
+  ],
+  "author": "61Magical",
+  "license": "ISC",
+  "devDependencies": {
+    "microbundle": "^0.15.0",
+    "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
